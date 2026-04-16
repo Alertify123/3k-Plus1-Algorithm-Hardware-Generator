@@ -1,6 +1,4 @@
 # 3k-1-Algorithm-Hardware-Generator
-VHDL-FPGA Project
-
 ## System Architecture
 - [Architecture diagrams and design notes](docs/architecture.md)
 # 3k+1 Hardware Generator on FPGA: Two RTL Architectures, One Verified Result
