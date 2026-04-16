@@ -1,0 +1,19 @@
+stateDiagram-v2
+    [*] --> RESET_STATE
+    RESET_STATE --> TEST_STATE
+
+    TEST_STATE --> GENERATE_NEXT: term_is_one = 0
+    TEST_STATE --> INCREMENT: term_is_one = 1\nlength_ge_9 = 0
+    TEST_STATE --> DONE_STATE: term_is_one = 1\nlength_ge_9 = 1
+
+    INCREMENT --> RELOAD_TERM: inc_number
+    RELOAD_TERM --> TEST_STATE: load_term\nreset_length
+
+    GENERATE_NEXT --> DIVIDE: term_is_even = 1
+    GENERATE_NEXT --> MULT_ADD: term_is_even = 0
+
+    DIVIDE --> TEST_STATE: shift_term\ninc_length
+    MULT_ADD --> TEST_STATE: do_mult\ninc_length
+
+    DONE_STATE --> DONE_STATE: load_done
+    DONE_STATE --> [*]

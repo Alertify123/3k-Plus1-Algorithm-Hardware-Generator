@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+  <style>
+    .b{fill:#eef4ff;stroke:#224;stroke-width:2}.t{font:18px Arial,sans-serif;fill:#111}
+    .l{stroke:#333;stroke-width:2;fill:none;marker-end:url(#a)} .c{font:14px Arial,sans-serif;fill:#333}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker></defs>
+
+  <rect x="80" y="220" width="250" height="140" rx="12" class="b"/>
+  <text x="205" y="295" text-anchor="middle" class="t">Control FSM</text>
+
+  <rect x="460" y="70" width="220" height="70" rx="10" class="b"/>
+  <text x="570" y="112" text-anchor="middle" class="t">number_reg</text>
+
+  <rect x="460" y="200" width="220" height="70" rx="10" class="b"/>
+  <text x="570" y="242" text-anchor="middle" class="t">term</text>
+
+  <rect x="460" y="330" width="220" height="70" rx="10" class="b"/>
+  <text x="570" y="372" text-anchor="middle" class="t">length</text>
+
+  <rect x="460" y="460" width="220" height="70" rx="10" class="b"/>
+  <text x="570" y="502" text-anchor="middle" class="t">done</text>
+
+  <path d="M330 250 L460 95" class="l"/><text x="360" y="170" class="c">inc_number</text>
+  <path d="M330 270 L460 220" class="l"/><text x="360" y="245" class="c">load_term</text>
+  <path d="M330 290 L460 235" class="l"/><text x="360" y="275" class="c">shift_term</text>
+  <path d="M330 310 L460 250" class="l"/><text x="360" y="305" class="c">do_mult</text>
+  <path d="M330 330 L460 345" class="l"/><text x="350" y="355" class="c">reset_length</text>
+  <path d="M330 350 L460 365" class="l"/><text x="365" y="385" class="c">inc_length</text>
+  <path d="M330 370 L460 495" class="l"/><text x="350" y="450" class="c">load_done</text>
+
+  <path d="M680 105 L460 220" class="l"/><text x="705" y="165" class="c">value path</text>
+
+  <path d="M680 230 L860 250 L860 260 L330 260" class="l"/><text x="870" y="248" class="c">term_is_one</text>
+  <path d="M680 250 L900 300 L900 300 L330 300" class="l"/><text x="910" y="298" class="c">term_is_even</text>
+  <path d="M680 365 L940 350 L940 340 L330 340" class="l"/><text x="950" y="348" class="c">length_ge_9</text>
+</svg>
