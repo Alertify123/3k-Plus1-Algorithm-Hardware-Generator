@@ -1,3 +1,8 @@
+# 3k-1-Algorithm-Hardware-Generator
+VHDL-FPGA Project
+
+## System Architecture
+- [Architecture diagrams and design notes](docs/architecture.md)
 # 3k+1 Hardware Generator on FPGA: Two RTL Architectures, One Verified Result
 
 This project implements the 3k+1 (Collatz-style) sequence in synthesizable VHDL and compares two digital design approaches on the same problem: a compact single-process FSM and a structured ASM-style datapath/control split. The design challenge is interesting because it blends arithmetic transformation logic, cycle-by-cycle state control, and hardware-oriented verification to determine the smallest input value *k* that produces a sequence length of at least 9, then carry that implementation through simulation and FPGA synthesis.

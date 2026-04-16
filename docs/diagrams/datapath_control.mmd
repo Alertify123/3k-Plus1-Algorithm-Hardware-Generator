@@ -1,0 +1,14 @@
+flowchart LR
+    C[Control FSM] -->|inc_number| N[number_reg]
+    C -->|load_term| T[term]
+    C -->|shift_term| T
+    C -->|do_mult| T
+    C -->|reset_length| L[length]
+    C -->|inc_length| L
+    C -->|load_done| D[done]
+
+    N -->|value| T
+
+    T -->|term_is_one| C
+    T -->|term_is_even| C
+    L -->|length_ge_9| C
