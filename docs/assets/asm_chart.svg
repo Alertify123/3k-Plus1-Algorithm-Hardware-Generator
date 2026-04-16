@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <style>
+    .s{fill:#eef4ff;stroke:#224;stroke-width:2}.t{font:16px Arial, sans-serif;fill:#111}
+    .l{stroke:#333;stroke-width:2;fill:none;marker-end:url(#a)} .c{font:14px Arial,sans-serif;fill:#333}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker></defs>
+  <rect x="500" y="40" width="200" height="50" rx="10" class="s"/><text x="600" y="72" text-anchor="middle" class="t">RESET_STATE</text>
+  <rect x="500" y="140" width="200" height="50" rx="10" class="s"/><text x="600" y="172" text-anchor="middle" class="t">TEST_STATE</text>
+  <rect x="240" y="260" width="200" height="50" rx="10" class="s"/><text x="340" y="292" text-anchor="middle" class="t">INCREMENT</text>
+  <rect x="240" y="360" width="200" height="50" rx="10" class="s"/><text x="340" y="392" text-anchor="middle" class="t">RELOAD_TERM</text>
+  <rect x="760" y="260" width="220" height="50" rx="10" class="s"/><text x="870" y="292" text-anchor="middle" class="t">GENERATE_NEXT</text>
+  <rect x="700" y="380" width="160" height="50" rx="10" class="s"/><text x="780" y="412" text-anchor="middle" class="t">DIVIDE</text>
+  <rect x="900" y="380" width="180" height="50" rx="10" class="s"/><text x="990" y="412" text-anchor="middle" class="t">MULT_ADD</text>
+  <rect x="500" y="500" width="200" height="50" rx="10" class="s"/><text x="600" y="532" text-anchor="middle" class="t">DONE_STATE</text>
+
+  <path d="M600 90 L600 140" class="l"/>
+  <path d="M560 190 C520 230 430 240 390 260" class="l"/><text x="460" y="230" class="c">term_is_one &amp; !length_ge_9</text>
+  <path d="M640 190 C700 230 790 240 840 260" class="l"/><text x="760" y="230" class="c">!term_is_one</text>
+  <path d="M600 190 L600 500" class="l"/><text x="615" y="350" class="c">term_is_one &amp; length_ge_9</text>
+
+  <path d="M340 310 L340 360" class="l"/><text x="350" y="340" class="c">inc_number</text>
+  <path d="M440 385 C560 385 560 210 600 190" class="l"/><text x="455" y="365" class="c">load_term, reset_length</text>
+
+  <path d="M870 310 L780 380" class="l"/><text x="785" y="352" class="c">term_is_even</text>
+  <path d="M870 310 L990 380" class="l"/><text x="935" y="352" class="c">!term_is_even</text>
+  <path d="M780 430 C760 470 680 470 620 190" class="l"/><text x="690" y="455" class="c">shift_term, inc_length</text>
+  <path d="M990 430 C980 470 760 470 620 190" class="l"/><text x="860" y="485" class="c">do_mult, inc_length</text>
+
+  <path d="M600 550 L600 550" class="l"/>
+  <text x="620" y="585" class="c">load_done (self loop)</text>
+  <path d="M700 525 C760 525 760 580 700 580 C640 580 640 525 700 525" class="l"/>
+</svg>
